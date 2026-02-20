@@ -3,7 +3,11 @@ const app = express();
 app.listen(8080, () => {
   console.log("Server Started....");
 });
-app.use(express.json())
+const greet = () => {
+    console.log("Hello World");
+};
+app.use(greet);
+app.use(express.json());
 let users = [
   { id: 1, name: "avi", email: "avi@mail.com", role: "Student" },
 
