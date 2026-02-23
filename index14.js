@@ -12,4 +12,3 @@ const user = {
 };
 const token = jwt.sign(user, SECRET, { expiresIn: "1h" });
 console.log("Generated Token:", token);
-
