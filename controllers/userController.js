@@ -1,5 +1,6 @@
+import { users } from "../models/userModel.js";
 export const getUsers = (req, res) => {
-  res.send("This is get request for users");
+  res.json(users);
 };
 
 export const createUser = (req, res) => {
