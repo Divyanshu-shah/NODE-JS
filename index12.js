@@ -1,25 +1,11 @@
 //router
-
 import express from "express";
+import userRouter from "./routes/userRoutes.js";
+import productRouter from "./routes/productRoutes.js";
 const app = express();
 app.listen(8080, () => {
   console.log("Server Started....");
 }); 
-const userRouter = express.Router();
-const productRouter = express.Router();
-
-userRouter.get("/", (req, res) => {
-  res.send("This is get request for users");
-});
-userRouter.post("/", (req, res) => {
-  res.send("This is post request for users");
-});
-productRouter.get("/", (req, res) => {
-  res.send("This is get request for products");
-});
-productRouter.post("/", (req, res) => {
-  res.send("This is post request for products");
-});
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 
