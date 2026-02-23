@@ -16,22 +16,6 @@ app.use("/api/products", productRouter);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // let users= [];
 // let products = [];
 
