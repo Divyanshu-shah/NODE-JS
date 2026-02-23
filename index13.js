@@ -2,7 +2,9 @@ import express from "express";
 import bcrypt from "bcrypt";
 const app = express();
 app.use(express.json());
-app.listen(8080);
+app.listen(8080, () => {
+  console.log("Server is running on port 8080");
+});
 const users = [];
 app.post("/signup", async (req, res) => {
   const body = req.body;
